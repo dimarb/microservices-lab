@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+  go:
+    build:
+      context: go
+      dockerfile: Dockerfile
+
+
+  node:
+    build:
+      context: nodejs
+      dockerfile: Dockerfile
+
+
+  proxy:
+    build:
+      context: proxy
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+
+
